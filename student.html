@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - CAMS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="student-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Student Panel</div>
+            <div class="student-profile">
+                <img src="../images/student-avatar.png" alt="Student" class="profile-img">
+                <h3 class="student-name">Rahul Sharma</h3>
+                <p class="student-id">ID: CSE001</p>
+                <p class="student-info">Computer Science | Semester 6</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#attendance"><i class="fas fa-calendar-check"></i> My Attendance</a></li>
+                <li><a href="#subjects"><i class="fas fa-book"></i> Subjects</a></li>
+                <li><a href="../index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>My Dashboard</h1>
+                <div class="semester-info">
+                    <span>Current Semester: 6th</span>
+                </div>
+            </div>
+
+            <!-- Attendance Summary -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Overall Attendance</h3>
+                    <p class="percentage">85%</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Total Classes</h3>
+                    <p>120</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check"></i>
+                    <h3>Classes Attended</h3>
+                    <p>102</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-times"></i>
+                    <h3>Classes Missed</h3>
+                    <p>18</p>
+                </div>
+            </div>
+
+            <!-- Subject-wise Attendance -->
+            <div class="subject-attendance">
+                <h2>Subject-wise Attendance</h2>
+                <div class="subjects-grid" id="subjectsList">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Recent Attendance -->
+            <div class="recent-attendance">
+                <h2>Recent Attendance History</h2>
+                <div class="attendance-table-container">
+                    <table class="attendance-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Subject</th>
+                                <th>Status</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceHistory">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/student.js"></script>
+</body>
+</html>
